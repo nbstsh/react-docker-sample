@@ -6,7 +6,7 @@ before_install:
   - docker build -t my-image -f Dockerfile.dev .
 
 scripts:
-  - docker run my-image npm run test -- --coverage
+  - docker run my-image npm run test:ci
 
 deploy:
   provider: elasticbeanstalk
